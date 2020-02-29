@@ -1,0 +1,17 @@
+name: 'IC Terminus CI'
+description: 'Container for running CI'
+inputs:
+  command:
+    description: 'Script to run'
+    required: true
+    default: 'echo "Please specify a command to run."'
+runs:
+  using: 'docker'
+  image: 'docker://quay.io/ithacacollege/terminus-ci:2.3'
+  args:
+    - /bin/bash
+    - -c
+    - ${{ inputs.command }}
+branding:
+  icon: package
+  color: blue

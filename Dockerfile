@@ -24,7 +24,7 @@ COPY set-environment /usr/local/bin/set-environment
 RUN composer -n global require -n "hirak/prestissimo:^0.3" \
     && mkdir -p ${TERMINUS_DIR} \
     && mkdir -p ${TERMINUS_PLUGINS_DIR} 
-RUN composer -n --working-dir=${TERMINUS_DIR} require --update-no-dev -o pantheon-systems/terminus:^2 \
+RUN composer -n --working-dir=${TERMINUS_DIR} require --update-no-dev -o pantheon-systems/terminus:^2.3 \
     && composer -n create-project --no-dev -d ${TERMINUS_PLUGINS_DIR} pantheon-systems/terminus-build-tools-plugin:^2.0.0-beta17 \
     && composer -n create-project --no-dev -d ${TERMINUS_PLUGINS_DIR} pantheon-systems/terminus-secrets-plugin \
     && composer -n create-project --no-dev -d ${TERMINUS_PLUGINS_DIR} pantheon-systems/terminus-rsync-plugin \
