@@ -38,4 +38,5 @@ RUN mkdir -p $HOME/.ssh \
     && echo "ControlPersist yes" >> "$HOME/.ssh/config" \
     && chmod 600 $HOME/.ssh/config \
     && terminus --version \
-    && robo --version
+    && robo --version \
+    && echo 'export PATH=$PATH:'$TERMINUS_DIR'/vendor/bin' >> /etc/profile.d/terminus.sh
