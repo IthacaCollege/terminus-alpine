@@ -7,7 +7,7 @@ RUN apk add --no-cache --virtual .dd-build-deps libxml2-dev oniguruma-dev $PHPIZ
     && docker-php-ext-install bcmath opcache pcntl pdo_mysql soap zip \
     && pecl install redis-3.1.1 \
     && docker-php-ext-enable redis \
-    && wget -O /usr/local/bin/composer https://getcomposer.org/composer.phar \
+    && wget -O /usr/local/bin/composer https://getcomposer.org/composer-stable.phar \
     && chmod +x /usr/local/bin/composer \
     && apk del .dd-build-deps \
     && pecl clear-cache \
