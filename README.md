@@ -12,4 +12,4 @@ In order to speed up CI, this lightweight Docker image has enough tools to get t
 ## What it does not have (use a different image for these steps)
 
 * bash
-* libraries for building/running Pattern Lab
+* libraries for building/running Storybook
